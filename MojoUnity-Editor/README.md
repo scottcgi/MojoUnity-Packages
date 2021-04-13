@@ -23,12 +23,12 @@ The main ways of use are:
 
 ## Use Cases
 
-![Common Test](/Images/MojoUnity-Editor/CommonTest.png "Common Test")
-![Group Test](/Images/MojoUnity-Editor/GroupTest.png "Group Test")
-![Array Test](/Images/MojoUnity-Editor/ArrayTest.png "Array Test")
-![Object Test](/Images/MojoUnity-Editor/ObjectTest.png "Object Test")
-![Logic Test](/Images/MojoUnity-Editor/LogicTest.png "Logic Test")
-![Window Test](/Images/MojoUnity-Editor/WindowTest.png "Window Test")
+![Common Test](./Images/CommonTest.png "Common Test")
+![Group Test](./Images/GroupTest.png "Group Test")
+![Array Test](./Images/ArrayTest.png "Array Test")
+![Object Test](./Images/ObjectTest.png "Object Test")
+![Logic Test](./Images/LogicTest.png "Logic Test")
+![Window Test](./Images/WindowTest.png "Window Test")
 
 ## Issues & Discussions
 
