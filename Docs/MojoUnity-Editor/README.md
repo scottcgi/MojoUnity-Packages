@@ -30,7 +30,7 @@ The main ways of use are:
 ![Logic Test](/Images/MojoUnity-Editor/LogicTest.png "Logic Test")
 ![Window Test](/Images/MojoUnity-Editor/WindowTest.png "Window Test")
 
-## Support
+## Issues & Discussions
 
 * Any bugs can go to [[MojoUnity-Editor Issues]](https://github.com/scottcgi/MojoUnity-Packages/labels/MojoUnity-Editor) for feedback.
 * Any questions or comments can go to [[MojoUnity-Editor Discussions]](https://github.com/scottcgi/MojoUnity-Packages/discussions/categories/mojounity-editor) for exchange.
