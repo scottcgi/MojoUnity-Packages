@@ -8,8 +8,7 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 
 ## Package List
 
-* [MojoUnity-Editor](/MojoUnity-Editor)   
-  This is an extension of the UnityEditor. With MojoUnity-Editor, you can easily and quickly extend the Unity's Inspector and Window.
+* [MojoUnity-Editor](/MojoUnity-Editor) - for custom UnityEditor's Inspectors or Windows.
 
 
 
