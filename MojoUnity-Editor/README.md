@@ -2,6 +2,7 @@
 
 **MojoUnity-Editor** is an extension of the **UnityEditor**. With **MojoUnity-Editor**, you can **easily** and **quickly** extend the Unity's **Inspector** and **Window**.
 
+* The current version is [[v1.0.unitypackage]](https://github.com/scottcgi/MojoUnity-Packages/blob/main/MojoUnity-Editor/MojoUnity-Editor-v1.0.unitypackage) packaged by `unity-2017.4.0f1`.
 * Released version in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
@@ -11,15 +12,14 @@
 
 Sure, using **MojoUnity-Editor**, you can easily build your complex Inspectors or Windows.
 
-The core design is:
+**The core design is:**
 * First, build built-in formatting and visibility control, which is **BaseEditor**.
 * Second, by inheriting **BaseEditor** to controlling properties implement the logical display and interaction.
 
-The main ways of use are: 
-
-* Use **Switch** to catch the properties that need to be set.
-* Use **DrawType** to control properties on Inspector or Window.
-* Use **EditorTool** to handle properties in Array or Object.
+**The main ways of use are: **
+* Use `Switch` to catch the properties that need to be set.
+* Use `DrawType` to control properties on Inspector or Window.
+* Use `EditorTool` to handle properties in Array or Object.
 
 ## Use Cases
 
