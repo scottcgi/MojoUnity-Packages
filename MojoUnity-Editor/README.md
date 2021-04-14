@@ -14,7 +14,7 @@
 * Custom **property** logical interaction.
 * Custom **Array** or **Object** display and interaction.
 * Custom **Group** or **Nested Group** display.
-* Custom **Window** display and interation.
+* Custom **Window** display and interaction.
 * Custom **Window Data** write and read.
 
 ## Issues & Discussions
