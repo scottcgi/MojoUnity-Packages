@@ -17,6 +17,11 @@
 * Custom **Window** display and interation.
 * Custom **Window Data** write and read.
 
+## Issues & Discussions
+
+* Any bugs can go to [[MojoUnity-Editor Issues]](https://github.com/scottcgi/MojoUnity-Packages/labels/MojoUnity-Editor) for feedback.
+* Any questions or comments can go to [[MojoUnity-Editor Discussions]](https://github.com/scottcgi/MojoUnity-Packages/discussions/categories/mojounity-editor) for exchange.
+
 ## Use Cases
 
 ![Common Test](./Images/CommonTest.png "Common Test")
@@ -25,8 +30,3 @@
 ![Object Test](./Images/ObjectTest.png "Object Test")
 ![Logic Test](./Images/LogicTest.png "Logic Test")
 ![Window Test](./Images/WindowTest.png "Window Test")
-
-## Issues & Discussions
-
-* Any bugs can go to [[MojoUnity-Editor Issues]](https://github.com/scottcgi/MojoUnity-Packages/labels/MojoUnity-Editor) for feedback.
-* Any questions or comments can go to [[MojoUnity-Editor Discussions]](https://github.com/scottcgi/MojoUnity-Packages/discussions/categories/mojounity-editor) for exchange.
