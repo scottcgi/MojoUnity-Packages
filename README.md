@@ -8,12 +8,12 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 
 ## Package List
 
-* [MojoUnity-Editor](/MojoUnity-Editor)  `Custom Unity's Inspector or Window`.
-* MojoUnity-Shake `On the way`.
-* MojoUnity-Tween `On the way`.
-* MojoUnity-UI `On the way`.
-* MojoUnity-Data `On the way`.
-* MojoUnity-Net `On the way`.
+* [MojoUnity-Editor](/MojoUnity-Editor) — Custom Unity's Inspector or Window.
+* MojoUnity-Shake — On the way.
+* MojoUnity-Tween — On the way.
+* MojoUnity-UI — On the way.
+* MojoUnity-Data — On the way.
+* MojoUnity-Net — On the way.
 * ……
 
 ## Source Code
@@ -28,7 +28,7 @@ Further, the `Packages` hava a unified directory structure, so the `share code` 
 
 ## Support
 
-* Star & Issue & Discussion on GitHub, or share to anyone.
+* Star & Issue & Discuss on GitHub, or share **MojoUnity-Packages** project to anyone.
 * If the source code is **useful** or **helpful** for you, maybe buy me a coffee via **Sponsor Button**.
 
 
