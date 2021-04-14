@@ -6,8 +6,6 @@
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
-And the **unitypackage** will provide all the **source code**.
-
 ## Features
 
 **MojoUnity-Editor** uses a new way to code Inspector and Window, it skips many details to control the format and interaction of properties on GUI. You can easily build your complex Inspectors or Windows, with the following features:
