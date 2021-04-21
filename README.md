@@ -19,13 +19,9 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 
 ## Source Code
 
-All `Packages` are committed with `.unitypackage`, and the `.unitypackage` will provide all the **source code** including **sample code**.
+All `Packages` provide **sample code** and `.unitypackage`. The `.unitypackage` is exported from the **souce code** by Unity and can be used out of the box.
 
-why `.unitypackage` ? 
-
-Because the `Packages` are part of the `MojoUnity` framework, so they share some `basic code`, but these codes are not function cohesive and cannot be a `Package`, if want to keep the `code` easy to use and not repeat, a better way is to provide `.unitypackage`.
-
-Further, the `Packages` hava a unified directory structure, so the `share code` can be unique when multiple `Packages` are imported into Unity.
+Further, the `Packages` are part of the `MojoUnity` framework, and hava a unified directory structure, so the `share code` in `Packages` can be unique, when multiple `Packages` are imported into Unity.
 
 ## Support
 
