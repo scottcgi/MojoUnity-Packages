@@ -1,8 +1,8 @@
-## MojoUnity-Editor v1.0
+## MojoUnity-Editor v1.0.1
 
 **MojoUnity-Editor** is an extension of the **UnityEditor**. With it, you can **easily** and **quickly** extend the Unity's **Inspector** and **Window**.
 
-* The current version is [[v1.0.unitypackage]](./MojoUnity-Editor-v1.0.unitypackage), **packaged** by `Unity-2020.3`, **tested** on `Unity-2017.4`, and **supported** Unity versions are `2017.4 or higher`.  
+* The current `unitypackage`, **packaged** by `Unity-2020.3`, **tested** on `Unity-2017.4`, and **supported** Unity versions are `2017.4 or higher`.  
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
