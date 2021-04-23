@@ -34,7 +34,7 @@ The **source code** depends on the `Burst Package`, which can be found and insta
   
 ## Quick Start
 
-1. Open the `MojoUnityShake` Scene in `/MojoUnity/Samples/MojoUnityShake/Scenes/MojoUnityShake.unity`
+1. Open the `MojoUnityShake` Scene in `/MojoUnity/Samples/MojoUnityShake/Scenes/MojoUnityShake.unity`.
 2. Click the `Cube` GameObject in `Unity Hierarchy`.
 3. Click the `Play` button in `Unity Game Window`.
 4. Shake the `Cube` by `ShakeTest` in `Unity Inspector`.  
