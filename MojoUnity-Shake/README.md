@@ -18,7 +18,7 @@ The **source code** depends on the `Burst Package`, which can be found and insta
 
 * Two **efficient** algorithms, silky **realistic** effect.
 * Simple **API** easy to use.
-* Extend to shake **anything** you want.
+* Free extend to shake **anything** you want.
 * Using **BurstCompile** to optimize.
 
 ## Use Cases
