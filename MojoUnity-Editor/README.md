@@ -6,7 +6,7 @@
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
-Quick **goto** the [Samples Code](Src/MojoUnity/Samples/MojoUnityEditor/Scripts/) and the [Source Code](https://github.com/scottcgi/MojoUnity-Packages/tree/main/MojoUnity-Editor/Src/MojoUnity/Scripts/Editor/BaseEditor).
+Quick **goto** the [Samples Code](./Src/MojoUnity/Samples/MojoUnityEditor/Scripts/) and the [Source Code](./Src/MojoUnity/Scripts/Editor/BaseEditor).
 
 ## Note
 
