@@ -8,6 +8,8 @@ And it provides an extension of `Transform` can easily shake any **Transform Com
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
+Quick **goto** the [Samples Code](./Src/MojoUnity/Samples/MojoUnityShake/Scripts/) and the [Source Code](./Src/MojoUnity/Scripts/Modules/Animation/Shake/).
+
 ## Note
 
 The **source code** depends on the `Burst Package`, which can be found and installed by `Package Manager` in the Unity menu `Window/Package Manager`.
@@ -32,11 +34,10 @@ The **source code** depends on the `Burst Package`, which can be found and insta
   
 ## Quick Start
 
-1. Open the `MojoUnityShakeScene` in `/MojoUnity/Samples/MojoUnityShake/Scenes/MojoUnityShake.unity`
+1. Open the `MojoUnityShake` Scene in `/MojoUnity/Samples/MojoUnityShake/Scenes/MojoUnityShake.unity`
 2. Click the `Cube` GameObject in `Unity Hierarchy`.
 3. Click the `Play` button in `Unity Game Window`.
-4. Shake the `Cube` by `ShakeTest` in `Unity Inspector`. 
-5. View the samples code in `/MojoUnity/Samples/MojoUnityShake/Scripts`.  
+4. Shake the `Cube` by `ShakeTest` in `Unity Inspector`.  
 
 ## Issues & Discussions
 
