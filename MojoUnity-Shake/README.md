@@ -21,6 +21,22 @@ The **source code** depends on the `Burst Package`, which can be found and insta
 
 ## Use Cases
 
+* Shake Transform **Position** XYZ   
+  ![](./Images/ShakePosition.gif)
+  
+* Shake Transform **Scale** XYZ  
+  ![](./Images/ShakeScale.gif)
+
+* Shake Transform **Rotation** XYZ  
+  ![](./Images/ShakeRotation.gif)
+  
+## Quick Start
+
+1. Open the `MojoUnityShakeScene` in `/MojoUnity/Samples/MojoUnityShake/Scenes/MojoUnityShake.unity`
+2. Click the `Cube` GameObject in `Unity Hierarchy`.
+3. Click the `Play` button in `Unity Game Window`.
+4. Shake the `Cube` by `ShakeTest` in `Unity Inspector`. 
+5. View the samples code in `/MojoUnity/Samples/MojoUnityShake/Scripts`.  
 
 ## Issues & Discussions
 
