@@ -9,7 +9,7 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 ## Package List
 
 * [MojoUnity-Editor](/MojoUnity-Editor) — Custom Unity's Inspector or Window.
-* MojoUnity-Shake — On the way.
+* [MojoUnity-Shake](/MojoUnity-Shake)   — Shake Animation Tool.
 * MojoUnity-Tween — On the way.
 * MojoUnity-TextPro — On the way.
 * MojoUnity-UI — On the way.
@@ -19,7 +19,7 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 
 ## Source Code
 
-All `Packages` provide **sample code** and `.unitypackage`. The `.unitypackage` is exported from the **souce code** by Unity and can be used out of the box.
+All `Packages` provide **samples code** and `.unitypackage`. The `.unitypackage` is exported from the **source code** by Unity and can be used out of the box.
 
 Further, the `Packages` are part of the `MojoUnity` framework, and hava a unified directory structure, so the `share code` in `Packages` can be unique, when multiple `Packages` are imported into Unity.
 
