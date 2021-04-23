@@ -36,10 +36,7 @@ The C# code used the `interpolated strings` feature, so we need to set the `.net
 
 1. Open the `MojoUnityEditor` Scene in `/MojoUnity/Samples/MojoUnityEditor/Scenes/MojoUnityEidtor.unity`
 2. Click the Samples in `Unity Hierarchy`, and see the result in the `Unity Inspector`.
-3. View the samples code in `/MojoUnity/Samples/MojoUnityEditor/Scripts`.
-
-The MojoUnity-Editor source code at `/MojoUnity/Scripts/Editor/BaseEditor`, with good format and comments, you can read or debug to see how it works.
-
+3. View the Samples code in `/MojoUnity/Samples/MojoUnityEditor/Scripts`.
 
 ## Issues & Discussions
 
