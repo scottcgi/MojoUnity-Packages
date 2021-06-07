@@ -10,7 +10,7 @@ MojoUnity-Packages is licensed under the [MIT License](./LICENSE "MojoUnity-Pack
 
 * [MojoUnity-Editor](/MojoUnity-Editor) — Custom Unity's Inspector or Window.
 * [MojoUnity-Shake](/MojoUnity-Shake)   — Shake Animation Tool.
-* [MojoUnity-TextPro](/MojoUnity-MojoUnity-TextPro) — Extend UGUI Text to mix text-image-event.
+* [MojoUnity-TextPro](/MojoUnity-TextPro) — Extend UGUI Text to mix text-image-event.
 * MojoUnity-Tween — On the way.
 * MojoUnity-UI — On the way.
 * MojoUnity-Data — On the way.
