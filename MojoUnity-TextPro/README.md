@@ -24,10 +24,10 @@ The **source code** depends on the `Unity UI`, which can be found and installed 
 * Custom **tag** in Text.  
   ![](./Images/CustomTag.png)
   
-* Image **dictionay** in Inspector.  
+* Image **dictionary** in Inspector.  
   ![](./Images/ImageDictionary.png)
 
-* Event **dictionay** in Inspector.    
+* Event **dictionary** in Inspector.    
   ![](./Images/EventDictionary.png)
 
 * Play **Image-Text-Event** in Unity.  
