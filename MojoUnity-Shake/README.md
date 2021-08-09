@@ -1,8 +1,6 @@
 ## MojoUnity-Shake v1.1
 
-**MojoUnity-Shake** is a **Animation Tool** that can shake `float` `vector2` `vector3` with realistic effects. It uses `Coroutine` to implement the **Smooth** or **PerlinNoise** algorithm. 
-
-And it provides an extension of `Transform` can easily shake any **Transform Component** (including Camera) by `Position` `Scale` `Rotation`.
+**MojoUnity-Shake** is an **Animation Tool** that can shake `float` `vector2` `vector3` with realistic effects. It uses `Coroutine` with `Mathf.PerlinNoise` algorithm to implement the shake animation. And it provides an extension of `Transform` can easily shake any `Transform Component` (including Camera) by `Position` `Scale` `Rotation`.
 
 * The current `unitypackage`, **packaged** by `Unity-2019.4`, and **supported** Unity versions are `2019.4 or higher`.  
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
@@ -16,7 +14,7 @@ The **source code** depends on the `Burst Package`, which can be found and insta
 
 ## Features
 
-* Two **efficient** algorithms, silky **realistic** effect.
+* **Efficient** algorithm, silky **realistic** effect.
 * Simple **API** easy to use.
 * Free extend to shake **anything** you want.
 * Using **BurstCompile** to optimize.
