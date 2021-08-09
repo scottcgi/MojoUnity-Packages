@@ -8,7 +8,7 @@
  * Package: https://github.com/scottcgi/MojoUnity-Packages/tree/main/MojoUnity-Shake 
  *
  * Since  : 2017-12-1
- * Update : 2020-2-14
+ * Update : 2021-8-7
  * Author : scott.cgi
  */
 
@@ -20,18 +20,9 @@ using Unity.Mathematics;
 
 namespace MojoUnity
 {
-    #if ENABLE_BURST_AOT
     [BurstCompile]
-    #endif
     public static class ShakeTool 
     {
-        public enum ShakeType
-        {
-            Smooth,
-            PerlinNoise,
-        }
-
-
         private const float RandomRange = 1234.5f;
 
 
@@ -47,13 +38,12 @@ namespace MojoUnity
             float         duration, 
             Func<float>   OnGetOriginal,
             Action<float> OnShake, 
-            Action        OnComplete,
-            ShakeType     shakeType
+            Action        OnComplete
         )
         {
             CoroutineExecutor.StartTask
             (
-                ShakeRoutine(magnitude, speed, duration, OnGetOriginal, OnShake, OnComplete, shakeType)
+                ShakeRoutine(magnitude, speed, duration, OnGetOriginal, OnShake, OnComplete)
             );
         }
 
@@ -70,13 +60,12 @@ namespace MojoUnity
             float           duration, 
             Func<Vector2>   OnGetOriginal,
             Action<Vector2> OnShake, 
-            Action          OnComplete,
-            ShakeType       shakeType
+            Action          OnComplete
         )
         {
             CoroutineExecutor.StartTask
             (
-                ShakeRoutine(magnitude, speed, duration, OnGetOriginal,OnShake, OnComplete, shakeType)
+                ShakeRoutine(magnitude, speed, duration, OnGetOriginal,OnShake, OnComplete)
             );
         }
 
@@ -93,13 +82,12 @@ namespace MojoUnity
             float           duration, 
             Func<Vector3>   OnGetOriginal,
             Action<Vector3> OnShake,
-            Action          OnComplete,
-            ShakeType       shakeTpe
+            Action          OnComplete
         )
         {
             CoroutineExecutor.StartTask
             (
-                ShakeRoutine(magnitude, speed, duration, OnGetOriginal, OnShake, OnComplete, shakeTpe)
+                ShakeRoutine(magnitude, speed, duration, OnGetOriginal, OnShake, OnComplete)
             );
         }
 
@@ -116,19 +104,17 @@ namespace MojoUnity
             float           duration,
             Func<float>     OnGetOriginal,
             Action<float>   OnShake, 
-            Action          OnComplete,
-            ShakeType       shakeType
+            Action          OnComplete
         )
         {
             var original = OnGetOriginal();
-            var data     = new ShakeData1()
+            var data     = new ShakeDataRandom1()
             {
                 magnitude = magnitude,
                 speed     = speed,
                 duration  = duration,
                 elapsed   = 0.0f,
                 random    = UnityEngine.Random.Range(-RandomRange, RandomRange),
-                shakeType = shakeType
             };
 
             while (data.elapsed < duration) 
@@ -146,37 +132,27 @@ namespace MojoUnity
         /// <summary>
         /// Shake float by params.
         /// </summary>
-        #if ENABLE_BURST_AOT
         [BurstCompile]
-        #endif        
-        private static float ShakeFloat(ref ShakeData1 data, float original)
+        private static float ShakeFloat(ref ShakeDataRandom1 data, float original)
         {
             data.elapsed += data.deltaTime;
             var percent   = data.elapsed / data.duration;   
             var rps       = data.random  + percent * data.speed;
+            var range     = Mathf.PerlinNoise(rps, rps);
 
             // map to [-1, 1]
-            var range = 0.0f;
+            range = math.mad(range, 2.0f, -1.0f);
 
-            switch (data.shakeType)
-            {
-                case ShakeType.Smooth:
-                    range = math.sin(rps) + math.cos(rps);
-                    break;
-
-                case ShakeType.PerlinNoise:
-                    range = Mathf.PerlinNoise(rps, rps);
-                    break;
-            }
-
-            // reduce shake start from 50% duration
             if (percent < 0.5f)
             {
-                return range * data.magnitude + original;
+                return math.mad(range, data.magnitude, original);
+                // range * data.magnitude + original;
             }
             else 
             {
-                return range * data.magnitude * (2.0f * (1.0f - percent)) + original;
+                // speed decay
+                return math.mad(math.mul(range, data.magnitude), math.mul(2.0f, 1.0f - percent), original);
+                // range * data.magnitude * (2.0f * (1.0f - percent)) + original;
             }
         }
 
@@ -193,13 +169,12 @@ namespace MojoUnity
             float           duration, 
             Func<Vector2>   OnGetOriginal,
             Action<Vector2> OnShake, 
-            Action          OnComplete,
-            ShakeType       shakeType
+            Action          OnComplete
         )
         {
-            var     original = OnGetOriginal();
-            Vector2 result   = Vector2.zero;
-            var     data     = new ShakeData2()
+            var original  = (float2) OnGetOriginal();
+            var result    = float2.zero;
+            var data      = new ShakeDataRandom2()
             {
                 magnitude = magnitude,
                 speed     = speed,
@@ -207,7 +182,6 @@ namespace MojoUnity
                 elapsed   = 0.0f,
                 random1   = UnityEngine.Random.Range(-RandomRange, RandomRange),
                 random2   = UnityEngine.Random.Range(-RandomRange, RandomRange),
-                shakeType = shakeType
             };
 
             while (data.elapsed < duration) 
@@ -226,41 +200,28 @@ namespace MojoUnity
         /// <summary>
         /// Shake Vector2 by params.
         /// </summary>
-        #if ENABLE_BURST_AOT
         [BurstCompile]
-        #endif        
-        private static void ShakeVector2(ref ShakeData2 data, ref Vector2 original, ref Vector2 result)
+        private static void ShakeVector2(ref ShakeDataRandom2 data, ref float2 original, ref float2 result)
         {
             data.elapsed += data.deltaTime;
             var percent   = data.elapsed / data.duration;   
             var ps        = percent      * data.speed;
+            var range1    = Mathf.PerlinNoise(data.random1 + ps, 0.0f);
+            var range2    = Mathf.PerlinNoise(0.0f, data.random2 + ps);
 
             // map to [-1, 1]
-            var range1 = 0.0f;
-            var range2 = 0.0f;
+            var range = new float2(math.mad(range1, 2.0f, -1.0f), math.mad(range2, 2.0f, -1.0f));
 
-            switch (data.shakeType)
-            {
-                case ShakeType.Smooth:
-                    range1 = math.sin(data.random1 + ps);
-                    range2 = math.cos(data.random2 + ps);
-                    break;
-
-                case ShakeType.PerlinNoise:
-                    range1 = Mathf.PerlinNoise(data.random1 + ps, 0.0f);
-                    range2 = Mathf.PerlinNoise(0.0f, data.random2 + ps);
-                    break;
-            }
-
-            // reduce shake start from 50% duration
             if (percent < 0.5f)
             {
-                result = new Vector2(range1 * data.magnitude, range2 * data.magnitude) + original;
+                result = range * data.magnitude + original;
             }
             else
             {
-                var magDecay = data.magnitude * (2.0f * (1.0f - percent));
-                result       = new Vector2(range1 * magDecay, range2 * magDecay) + original;
+                // speed decay
+                var decay = math.mul(data.magnitude, math.mul(2.0f, 1.0f - percent));
+                // data.magnitude * (2.0f * (1.0f - percent));
+                result    = range * decay + original;
             }
         }
 
@@ -277,13 +238,12 @@ namespace MojoUnity
             float           duration, 
             Func<Vector3>   OnGetOriginal,
             Action<Vector3> OnShake, 
-            Action          OnComplete,
-            ShakeType       shakeType
+            Action          OnComplete
         )
         {
-            var     original = OnGetOriginal();
-            Vector3 result   = Vector3.zero;
-            var     data     = new ShakeData3()
+            var original  = (float3) OnGetOriginal();
+            var result    = float3.zero;
+            var data      = new ShakeDataRandom3()
             {
                 magnitude = magnitude,
                 speed     = speed,
@@ -292,7 +252,6 @@ namespace MojoUnity
                 random1   = UnityEngine.Random.Range(-RandomRange, RandomRange),
                 random2   = UnityEngine.Random.Range(-RandomRange, RandomRange),
                 random3   = UnityEngine.Random.Range(-RandomRange, RandomRange),
-                shakeType = shakeType
             };
 
             while (data.elapsed < duration) 
@@ -311,93 +270,71 @@ namespace MojoUnity
         /// <summary>
         /// Shake Vector3 by params.
         /// </summary>
-        #if ENABLE_BURST_AOT
         [BurstCompile]
-        #endif        
-        private static void ShakeVector3(ref ShakeData3 data, ref Vector3 original, ref Vector3 result)
+        private static void ShakeVector3(ref ShakeDataRandom3 data, ref float3 original, ref float3 result)
         {
             data.elapsed += data.deltaTime;
             var percent   = data.elapsed / data.duration;
             var ps        = percent * data.speed;
+            var range1    = Mathf.PerlinNoise(data.random1 + ps, 0.0f);
+            var range2    = Mathf.PerlinNoise(0.0f,              data.random2 + ps);
+            var range3    = Mathf.PerlinNoise(data.random3 + ps, data.random3 + ps);
 
             // map to [-1, 1]
-            var range1   = 0.0f;
-            var range2   = 0.0f;
-            var range3   = 0.0f;
+            var range = new float3
+            (
+                math.mad(range1, 2.0f, -1.0f),
+                math.mad(range2, 2.0f, -1.0f),
+                math.mad(range3, 2.0f, -1.0f)
+            );
 
-            switch (data.shakeType)
-            {
-                case ShakeType.Smooth:
-                    range1 = math.sin(data.random1 + ps);
-                    range2 = math.cos(data.random2 + ps);
-                    range3 = math.sin(data.random3 + ps);
-                    break;
-
-                case ShakeType.PerlinNoise:
-                    range1 = Mathf.PerlinNoise(data.random1 + ps, 0.0f);
-                    range2 = Mathf.PerlinNoise(0.0f,              data.random2 + ps);
-                    range3 = Mathf.PerlinNoise(data.random3 + ps, data.random3 + ps);
-                    break;
-            }
-
-            // reduce shake start from 50% duration
             if (percent < 0.5f)
             {
-                result = new Vector3(range1 * data.magnitude, range2 * data.magnitude, range3 * data.magnitude) + original;
+                result = range * data.magnitude + original;
             }
             else
             {
-                var magDecay = data.magnitude * (2.0f * (1.0f - percent));
-                result       = new Vector3(range1 * magDecay, range2 * magDecay, range3 * magDecay) + original;
+                // speed decay
+                var decay = math.mul(data.magnitude, math.mul(2.0f, 1.0f - percent));
+                // data.magnitude * (2.0f * (1.0f - percent));
+                result    = range * decay + original;
             }
         }
 
 
-        #if ENABLE_BURST_AOT
-        [BurstCompile]
-        #endif    
-        private struct ShakeData1
+        private struct ShakeDataRandom1
         {
-            public float     magnitude;
-            public float     speed;
-            public float     duration;
-            public float     elapsed;
-            public float     random;
-            public ShakeType shakeType;
-            public float     deltaTime;
+            public float magnitude;
+            public float speed;
+            public float duration;
+            public float elapsed;
+            public float deltaTime;
+            public float random;
         }
 
 
-        #if ENABLE_BURST_AOT
-        [BurstCompile]
-        #endif    
-        private struct ShakeData2
+        private struct ShakeDataRandom2
         {
-            public float     magnitude;
-            public float     speed;
-            public float     duration;
-            public float     elapsed;
-            public float     random1;
-            public float     random2;
-            public ShakeType shakeType;
-            public float     deltaTime;
+            public float magnitude;
+            public float speed;
+            public float duration;
+            public float elapsed;
+            public float deltaTime;
+            public float random1;
+            public float random2;
         }
 
 
-        #if ENABLE_BURST_AOT
-        [BurstCompile]
-        #endif    
-        private struct ShakeData3
+        private struct ShakeDataRandom3
         {
-            public float     magnitude;
-            public float     speed;
-            public float     duration;
-            public float     elapsed;
-            public float     random1;
-            public float     random2;
-            public float     random3;
-            public ShakeType shakeType;
-            public float     deltaTime;
+            public float magnitude;
+            public float speed;
+            public float duration;
+            public float elapsed;
+            public float deltaTime;
+            public float random1;
+            public float random2;
+            public float random3;
         }
     }
 }

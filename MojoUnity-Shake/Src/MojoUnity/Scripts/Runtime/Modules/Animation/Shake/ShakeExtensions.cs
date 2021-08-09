@@ -20,7 +20,7 @@ namespace MojoUnity
     public static class ShakeExtensions
     {
         /// <summary>
-        /// Shake the transform's position x.
+        /// Shake the transform position x.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakePositionX
@@ -29,8 +29,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -40,14 +39,13 @@ namespace MojoUnity
                 duration,
                 ()  => transform.position.x,
                 (x) => transform.SetPositionX(x), 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's position y.
+        /// Shake the transform position y.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakePositionY
@@ -56,8 +54,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -67,14 +64,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.position.y,
                 (y) => transform.SetPositionY(y), 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's position z.
+        /// Shake the transform position z.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakePositionZ
@@ -83,8 +79,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -94,14 +89,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.position.z,
                 (z) => transform.SetPositionZ(z), 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's position x y.
+        /// Shake the transform position x y.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakePositionXY
@@ -110,8 +104,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -121,14 +114,13 @@ namespace MojoUnity
                 duration, 
                 ()   => (Vector2) transform.position,
                 (v2) => transform.SetPositionXY(v2),
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's position.
+        /// Shake the transform position.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakePosition
@@ -137,8 +129,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -148,14 +139,13 @@ namespace MojoUnity
                 duration, 
                 ()   => transform.position,
                 (v3) => transform.position = v3, 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's scale x.
+        /// Shake the transform scale x.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeScaleX
@@ -164,8 +154,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -175,14 +164,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.localScale.x,
                 (x) => transform.SetScaleX(x),
-                OnComplete,
-                shakeType 
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's scale y.
+        /// Shake the transform scale y.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeScaleY
@@ -191,8 +179,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -202,14 +189,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.localScale.y,
                 (y) => transform.SetScaleY(y),
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's scale z.
+        /// Shake the transform scale z.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeScaleZ
@@ -218,8 +204,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -229,14 +214,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.localScale.z,
                 (z) => transform.SetScaleZ(z),
-                OnComplete,
-                shakeType
+                OnComplete
             );            
         }
 
 
         /// <summary>
-        /// Shake the transform's scale x y.
+        /// Shake the transform scale x y.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeScaleXY
@@ -245,8 +229,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -256,14 +239,13 @@ namespace MojoUnity
                 duration, 
                 ()   => (Vector2) transform.localScale,
                 (v2) => transform.SetScaleXY(v2), 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's scale.
+        /// Shake the transform scale.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeScale
@@ -272,8 +254,7 @@ namespace MojoUnity
             float               magnitude  = 0.1f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -283,14 +264,13 @@ namespace MojoUnity
                 duration, 
                 ()   => transform.localScale,
                 (v3) => transform.localScale = v3, 
-                OnComplete,
-                shakeType
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's rotation x.
+        /// Shake the transform rotation x.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeRotationX
@@ -299,8 +279,7 @@ namespace MojoUnity
             float               magnitude  = 30.0f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -310,14 +289,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.eulerAngles.x,
                 (x) => transform.SetRotationX(x), 
-                OnComplete,
-                shakeType 
+                OnComplete
             );
         }
 
 
         /// <summary>
-        /// Shake the transform's rotation y.
+        /// Shake the transform rotation y.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeRotationY
@@ -326,8 +304,7 @@ namespace MojoUnity
             float               magnitude  = 30.0f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -337,14 +314,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.eulerAngles.y,
                 (y) => transform.SetRotationY(y), 
-                OnComplete,
-                shakeType 
+                OnComplete
             );            
         }
 
 
         /// <summary>
-        /// Shake the transform's rotation z.
+        /// Shake the transform rotation z.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeRotationZ
@@ -353,8 +329,7 @@ namespace MojoUnity
             float               magnitude  = 30.0f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -364,14 +339,13 @@ namespace MojoUnity
                 duration, 
                 ()  => transform.eulerAngles.z,
                 (z) => transform.SetRotationZ(z), 
-                OnComplete,
-                shakeType
+                OnComplete
             ); 
         }
 
 
         /// <summary>
-        /// Shake the transform's rotation.
+        /// Shake the transform rotation.
         /// [magnitude]: shake distance.
         /// </summary>
         public static void ShakeRotation
@@ -380,8 +354,7 @@ namespace MojoUnity
             float               magnitude  = 30.0f, 
             float               speed      = 100.0f, 
             float               duration   = 1.0f, 
-            Action              OnComplete = null,
-            ShakeTool.ShakeType shakeType  = ShakeTool.ShakeType.PerlinNoise
+            Action              OnComplete = null
         )
         {
             ShakeTool.Shake
@@ -391,8 +364,7 @@ namespace MojoUnity
                 duration,
                 ()   => transform.eulerAngles,
                 (v3) => transform.eulerAngles = v3,
-                OnComplete,
-                shakeType
+                OnComplete
             ); ; 
         }
     }

@@ -19,7 +19,6 @@ public class ShakeTest : MonoBehaviour
 {
     public float               speed     = 100f;
     public float               duration  = 2.0f;
-    public ShakeTool.ShakeType type      = ShakeTool.ShakeType.PerlinNoise;
 
     [Space(10)]
     public float               positionMagnitude = 0.2f;
@@ -50,76 +49,76 @@ public class ShakeTest : MonoBehaviour
         if (this.isShakePositionX)
         {
             this.isShakePositionX = false;
-            this.transform.ShakePositionX(this.positionMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakePositionX(this.positionMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakePositionY)
         {
             this.isShakePositionY = false;
-            this.transform.ShakePositionY(this.positionMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakePositionY(this.positionMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakePositionZ)
         {
             this.isShakePositionZ = false;
-            this.transform.ShakePositionZ(this.positionMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakePositionZ(this.positionMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakePositionXY)
         {
             this.isShakePositionXY = false;
-            this.transform.ShakePositionXY(this.positionMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakePositionXY(this.positionMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakePosition)
         {
             this.isShakePosition = false;
-            this.transform.ShakePosition(this.positionMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakePosition(this.positionMagnitude, this.speed, this.duration, null);
         }
 
 
         if (this.isShakeScaleX)
         {
             this.isShakeScaleX = false;
-            this.transform.ShakeScaleX(this.scaleMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeScaleX(this.scaleMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeScaleY)
         {
             this.isShakeScaleY = false;
-            this.transform.ShakeScaleY(this.scaleMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeScaleY(this.scaleMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeScaleZ)
         {
             this.isShakeScaleZ = false;
-            this.transform.ShakeScaleZ(this.scaleMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeScaleZ(this.scaleMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeScaleXY)
         {
             this.isShakeScaleXY = false;
-            this.transform.ShakeScaleXY(this.scaleMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeScaleXY(this.scaleMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeScale)
         {
             this.isShakeScale = false;
-            this.transform.ShakeScale(this.scaleMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeScale(this.scaleMagnitude, this.speed, this.duration, null);
         }
 
 
         if (this.isShakeRotationX)
         {
             this.isShakeRotationX = false;
-            this.transform.ShakeRotationX(this.rotationMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeRotationX(this.rotationMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeRotationY)
         {
             this.isShakeRotationY = false;
-            this.transform.ShakeRotationY(this.rotationMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeRotationY(this.rotationMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeRotationZ)
         {
             this.isShakeRotationZ = false;
-            this.transform.ShakeRotationZ(this.rotationMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeRotationZ(this.rotationMagnitude, this.speed, this.duration, null);
         }
         else if (this.isShakeRotation)
         {
             this.isShakeRotation = false;
-            this.transform.ShakeRotation(this.rotationMagnitude, this.speed, this.duration, null, this.type);
+            this.transform.ShakeRotation(this.rotationMagnitude, this.speed, this.duration, null);
         }
     }
 }

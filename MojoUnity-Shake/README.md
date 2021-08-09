@@ -1,4 +1,4 @@
-## MojoUnity-Shake v1.0
+## MojoUnity-Shake v1.1
 
 **MojoUnity-Shake** is a **Animation Tool** that can shake `float` `vector2` `vector3` with realistic effects. It uses `Coroutine` to implement the **Smooth** or **PerlinNoise** algorithm. 
 
@@ -8,7 +8,7 @@ And it provides an extension of `Transform` can easily shake any **Transform Com
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
-Quick **goto** the [Samples Code](./Src/MojoUnity/Samples/MojoUnityShake/Scripts/) and the [Source Code](./Src/MojoUnity/Scripts/Modules/Animation/Shake/).
+Quick **goto** the [Samples Code](./Src/MojoUnity/Samples/MojoUnityShake/Scripts/) and the [Source Code](./Src/MojoUnity/Scripts/Runtime/Modules/Animation/Shake/).
 
 ## Note
 
