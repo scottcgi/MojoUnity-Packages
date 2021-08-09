@@ -4,7 +4,7 @@
 
 And it provides an extension of `Transform` can easily shake any **Transform Component** (including Camera) by `Position` `Scale` `Rotation`.
 
-* The current `unitypackage`, **packaged** by `Unity-2020.3`, **tested** on `Unity-2018.4`, and **supported** Unity versions are `2018.4 or higher`.  
+* The current `unitypackage`, **packaged** by `Unity-2019.4`, and **supported** Unity versions are `2019.4 or higher`.  
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
 * Release changes in [ChangeLog](./ChangeLog.md).
 
