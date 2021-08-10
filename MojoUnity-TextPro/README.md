@@ -1,6 +1,6 @@
 ## MojoUnity-TextPro v1.0
 
-**MojoUnity-TextPro** is a **Extension** of **UGUI Text** which can mix **texts** and **images** as well as attach **events**.
+**MojoUnity-TextPro** is an **Extension** of **UGUI Text** which can mix **texts** and **images** as well as attach **events**.
 
 * The current `unitypackage`, **packaged** by `Unity-2020.3`, **tested** on `Unity-2018.4`, and **supported** Unity versions are `2018.4 or higher`.  
 * Released versions in [releases](https://github.com/scottcgi/MojoUnity-Packages/releases).
